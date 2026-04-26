@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <title>Isolir</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page-content-wrapper">
+      <div class="container">
+        <!-- Offline Area-->
+        <div class="offline-area-wrappe py-3 d-flex align-items-center justify-content-center">
+          <div class="offline-text text-center"><img class="mb-4 px-5" src="img/notif.png" alt="">
+            <h5 class="text-danger">Internet terputus!</h5>
+            <p>Layanan terputus, kami belum menerima pembaran internet anda untuk bulan <b class="text-danger" id="bulan"></b>, segera lakukan pembayaran untuk terus menikmati layanan internet kami. </p>
+          </div>
+        </div>
+         <!-- Footer Nav-->
+    <div class="footer-nav-area" id="footerNav">
+      <div class="container h-100 px-0">
+        <div class="apay-footer-nav h-100">
+          <ul class="h-100 d-flex align-items-center justify-content-between pl-0">                             
+            <li><a href="#"><img src="img/icon/footer/home.png" class="icon1" alt=""><i class="lni lni-hear"></i>Beranda</a></li>
+             <li><a href="chat.html"><img src="img/icon/footer/chat.png" class="icon1" alt=""><i class="lni lni-hear"></i>live chat</a></li>
+            <li><a href="promo.html"><img src="img/icon/footer/promo.png" class="icon1" alt=""><i class="lni lni"></i>Promo</a></li> 
+             <li><a href="help.html"><img src="img/icon/footer/help.png" class="icon1" alt=""><i class="lni lni-hear"></i>Bantuan </a></li>
+            <li><a href="paymant.html"><img src="img/icon/footer/pay.png" class="icon1" alt=""><i class="lni lni-shopping-baske"></i>Bayar</a></li>
+        
+            </ul>
+        </div>
+      </div>
+    </div>  
+
+   <script>
+var tw = new Date();
+if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
+else (a=tw.getTime());
+tw.setTime(a);
+var tahun= tw.getFullYear ();
+var hari= tw.getDay ();
+var bulan= tw.getMonth ();
+var tanggal= tw.getDate ();
+var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jum'at,","Sabtu,");
+var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Nopember","Desember");
+document.getElementById("bulan").innerHTML =  bulanarray[bulan]+" "+tahun;
+</script>
+  </body>
+</html>

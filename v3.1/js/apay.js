@@ -17,7 +17,7 @@
             margin: 0,
             nav: true,
             navText: [('<i class="lni lni-chevron-left"></i>'), ('<i class="lni lni-chevron-right"></i>')]
-        })
+        });
 
         welcomeSlider.on('translate.owl.carousel', function () {
             var layer = $("[data-animation]");
@@ -58,29 +58,19 @@
             dots: false,
             nav: false,
             responsive: {
-                1400: {
-                    items: 5,
-                },
-                992: {
-                    items: 5,
-                },
-                768: {
-                    items: 4,
-                },
-                480: {
-                    items: 4,
-                },
-            },
-        })
+                1400: { items: 5 },
+                992: { items: 5 },
+                768: { items: 4 },
+                480: { items: 4 }
+            }
+        });
     }
-       // :: audio
-var myaudio = document.getElementById("play");
+})(); 
 
-function PlayStop() { 
-return myaudio.paused ? myaudio.play() : myaudio.pause();
+// :: Expose Audio Controller ke Global Object agar terbaca oleh HTML onClick
+window.PlayStop = function() {
+    var myaudio = document.getElementById("play");
+    if(myaudio) {
+        return myaudio.paused ? myaudio.play() : myaudio.pause();
+    }
 };
- 
-
-}
-)
-(); 

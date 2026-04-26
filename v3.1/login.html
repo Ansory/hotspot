@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tema v3</title> 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-   <!-- script login form -->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tema v3 Hotspot</title> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
   $(if chap-id)
   <form name="sendin" action="$(link-login-only)" method="post">
     <input type="hidden" name="username" />
@@ -18,190 +17,148 @@
   </form>
   <script type="text/javascript" src="/md5.js"></script>
   <script type="text/javascript">
-  <!--
       function doLogin() {
-    document.sendin.username.value = document.login.username.value;
-    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
-    document.sendin.submit();
-    return false;
+          document.sendin.username.value = document.login.username.value;
+          document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+          document.sendin.submit();
+          return false;
       }
-  //-->
   </script>
-$(endif)     
-  </body>
-   <div class="page-apay">
-      <div class="container">
-        <div class="pt-3">
-          <div class="hero-slides owl-carousel">
-            <div class="single-hero-slide" style="background-image: url('img/slid1.jpg')">
-              <div class="slide-content h-100 d-flex align-items-center">
-              </div>
-            </div>
-            <div class="single-hero-slide" style="background-image: url('img/slid2.jpg')">
-              <div class="slide-content h-100 d-flex align-items-center">
-              </div>
-            </div>
-            <div class="single-hero-slide" style="background-image: url('img/slid3.jpg')">
-              <div class="slide-content h-100 d-flex align-items-center">
-              </div>
-            </div>
+  $(endif)     
+
+  <div class="page-apay">
+    <div class="container">
+      <div class="pt-3">
+        <div class="hero-slides owl-carousel">
+          <div class="single-hero-slide" style="background-image: url('img/slid1.jpg')">
+            <div class="slide-content h-100 d-flex align-items-center"></div>
+          </div>
+          <div class="single-hero-slide" style="background-image: url('img/slid2.jpg')">
+            <div class="slide-content h-100 d-flex align-items-center"></div>
+          </div>
+          <div class="single-hero-slide" style="background-image: url('img/slid3.jpg')">
+            <div class="slide-content h-100 d-flex align-items-center"></div>
           </div>
         </div>
       </div>
+    </div>
 
-        <div class="product-catagories-wrapper py-2">
-        <div class="container">
-                    <div class="section-heading">   
-              <div class="apply-coupon">
-                <div class=" mb-3 coupon-form ">
-               <form name="login" action="$(link-login-only)" method="post"
-              $(if chap-id) onSubmit="return doLogin()" $(endif)>
-            <input type="hidden" name="dst" value="$(link-orig)" />
-            <input type="hidden" name="popup" value="true" />
-                    <input class="form-control" autocomplete="off" id="username" name="username" type="text" placeholder="Masukan kode voucher wifi"  value="$(username)"/>
-<input id="password" name="password" type="hidden"/>
-                    <button class="btn btn-verifikasi" type="submit">Verifikasi</button>
-                  </form>
-                </div>
-			   </div>
-		<center>
-		<p class="mb-2" style="color:red"><script type="text/javascript">
-var error="$(error)"; 
-   var error1="user $(username) has reached uptime limit"; 
-   var error2="invalid password"; 
-   var error3="no valid profile found"; 
-   var error4="user &lt;$(username)&gt; not found"; 
-   var error5="no more sessions are allowed for user $(username)"; 
-   var error6="session limit reached ($(error-orig))"; var error7="web browser did not send challenge response (try again, enable JavaScript)"; 
-   var error8="invalid username or password"; 
-   var error9="user $(username) is not allowed to log in from this MAC address"; 
-   var error10="simultaneous session limit reached"; var error11="user $(username) has reached traffic limit"; 
-   var error12="uptime limit reached";  
-var error13="invalid Calling-Station-Id";  
-if (error==error1){window.location.href="isolir.html";}else 
-if (error==error2){window.location.href="salah.html";}else  
-if (error==error5){window.location.href="terpakai.html";}else  
-if (error==error6){window.location.href="terpakai.html";}else  
-if (error==error8){window.location.href="salah.html";}else   
-if (error==error10){window.location.href="terpakai.html";}else  
-if (error==error12){window.location.href="isolir.html";}else  
-if (error==error13){window.location.href="digunakan.html";}else{document.write("$(error)");}
-</script>
-</p>
-	</center>	   
-            </div> 
+    <div class="product-catagories-wrapper py-2">
+      <div class="container">
+        <div class="section-heading">   
+          <div class="apply-coupon">
+            <div class="mb-3 coupon-form">
+              <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                <input type="hidden" name="dst" value="$(link-orig)" />
+                <input type="hidden" name="popup" value="true" />
+                <input class="form-control" autocomplete="off" id="username" name="username" type="text" placeholder="Masukan kode voucher wifi" value="$(username)"/>
+                <input id="password" name="password" type="hidden"/>
+                <button class="btn btn-verifikasi" type="submit">Verifikasi</button>
+              </form>
+            </div>
+          </div>
+          <center>
+            <p id="error-message" class="mb-2" style="color:red; font-weight:bold;"></p>
+          </center>	   
+        </div> 
  
-    
-          <!-- Menu utama -->       
-         
-<button class="button">$(if trial == 'yes')<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><img class="image" src="img/icon/free.png"></a><br> Gratis <br>10 Menit</button>$(endif)
+        $(if trial == 'yes')
+        <button class="button"><a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><img class="image" src="img/icon/free.png" alt="Gratis"></a><br> Gratis <br>10 Menit</button>
+        $(endif)
 
-<button class="button"><a href="member.html"><img class="image" src="img/icon/member.png"></a><br> Login<br> Member</button>
+        <button class="button"><a href="member.html"><img class="image" src="img/icon/member.png" alt="Member"></a><br> Login<br> Member</button>
+        <button class="button"><a onclick="window.location='https://minitik.net/tools/qrscanner/index.php?sz=100';"><img class="image" src="img/icon/barcode.png" alt="Barcode"></a><br> Login <br>Barcode</button>
+        <button class="button"><a href="outlet.html"><img class="image" src="img/icon/vcr.png" alt="Outlet"></a><br> Agen<br>Terdaftar</button>
+        <button class="button"><a href="agen.html"><img class="image" src="img/icon/reg.png" alt="Agen"></a><br> Pendaftaran <br>Agen</button>
+        <button class="button"><a href="https://t.me/085850727066"><img class="image" src="img/icon/tele.png" alt="Telegram"></a><br> Dapatkan <br> Voucher</button>
+        <button class="button"><a href="paymant.html"><img class="image" src="img/icon/payment.png" alt="Bayar"></a><br> Metode <br>Pembayaran</button>
+        <button class="button"><a href="promo.html"><img class="image" src="img/icon/promo.png" alt="Promo"></a><br>Program<br> Promosi</button>
+        <button class="button"><a href="chat.html"><img class="image" src="img/icon/chat.png" alt="Chat"></a><br> Customer <br>Service</button>
+        <button class="button"><a href="help.html"><img class="image" src="img/icon/help.png" alt="Bantuan"></a><br> Panduan <br> Pengguna</button>
+        <button class="button"><a onclick="PlayStop()"><img class="image" src="img/icon/music.png" alt="Musik"></a><br> Pemutar<br> Musik</button>
+        <button class="button"><a href="#"><img class="image" src="img/icon/menu.png" alt="Menu"></a><br> Menu <br>Tambahan</button>
 
-<button class="button"><a  onclick="window.location='https://minitik.net/tools/qrscanner/index.php?sz=100';"><img class="image" src="img/icon/barcode.png"></a><br> Login <br>Barcode</button>
-
-<button class="button"><a href="outlet.html"><img class="image" src="img/icon/vcr.png"></a><br> Agen<br>Terdaftar</button>
-
-<button class="button"><a href="agen.html"><img class="image" src="img/icon/reg.png"></a><br> Pendaftaran <br>Agen</button>
-
-<button class="button"><a href="https://t.me/085850727066"><img class="image" src="img/icon/tele.png"></a><br> Dapatkan <br> Voucher</button>
-
-<button class="button"><a href="paymant.html"><img class="image" src="img/icon/payment.png"></a><br> Metode <br>Pembayaran</button>
-
-<button class="button"><a href="promo.html"><img class="image" src="img/icon/promo.png"></a><br>Progaram<br> Promosi</button>
-
-<button class="button"><a href="chat.html"><img class="image" src="img/icon/chat.png"></a><br> Customer <br>Service</button>
-
-<button class="button"><a href="help.html "><img class="image" src="img/icon/help.png"></a><br> Panduan <br> Pengguna</button>
-
-<button class="button"><a onClick="PlayStop()"><img class="image" src="img/icon/music.png"></a><br> Pemutar<br> Musik</button>
-
-<button class="button"><a href="#"><img class="image" src="img/icon/menu.png"></a><br> Menu <br>Tambahan</button>
-
- <!-- menu untuk menampilkan harga voucher --> 
-          <div class="flash-sale-slide owl-carousel">
-            <div class="card flash-sale-card">
-              <div class="card-body"><span class="product-title">Paket 5 jam</span>
-                  <p class="sale-price"> Harga 2.000</p><span class="progress-title"></span></div>
-            </div>            
-           
-            <div class="card flash-sale-card">
-              <div class="card-body"><span class="product-title">Paket 24 jam</span>
-                  <p class="sale-price">Harga 5.000</p><span class="progress-title"></span></div>
-            </div>
-            
-            <div class="card flash-sale-card">
-              <div class="card-body"><span class="product-title">Paket 1 minggu</span>
-                  <p class="sale-price">Harga 20.000</p><span class="progress-title"></span></div>
-            </div>
-            
-            <div class="card flash-sale-card">
-              <div class="card-body"><span class="product-title">Paket 1 bulan</span>
-                <p class="sale-price">Harga 50.000</p><span class="progress-title"></span></div>
-             </div>
-            </div>
-            </div>            
+        <div class="flash-sale-slide owl-carousel mt-3">
+          <div class="card flash-sale-card">
+            <div class="card-body"><span class="product-title">Paket 5 jam</span><p class="sale-price">Harga 2.000</p></div>
+          </div>            
+          <div class="card flash-sale-card">
+            <div class="card-body"><span class="product-title">Paket 24 jam</span><p class="sale-price">Harga 5.000</p></div>
+          </div>
+          <div class="card flash-sale-card">
+            <div class="card-body"><span class="product-title">Paket 1 minggu</span><p class="sale-price">Harga 20.000</p></div>
+          </div>
+          <div class="card flash-sale-card">
+            <div class="card-body"><span class="product-title">Paket 1 bulan</span><p class="sale-price">Harga 50.000</p></div>
+          </div>
+        </div>
+      </div>            
+    </div>
     
     <div class="py-3">
-        <div class="container">
-          <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card featured-product-card">
-                <div class="card-body"><span class="badge badge-primary">Agen voucher</span>
-              
-                  <div class="product-description"><a class="product-title d-block" href="agen.html">Jadi agen voucher?</a>
-                    <p class="sale-price">Deposit 100.000<span></span></p>
-                  </div>
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="card featured-product-card">
+              <div class="card-body"><span class="badge badge-primary">Agen voucher</span>
+                <div class="product-description"><a class="product-title d-block" href="agen.html">Jadi agen voucher?</a>
+                  <p class="sale-price">Deposit 100.000</p>
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card featured-product-card"><a href="get.html">
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="card featured-product-card">
+              <a href="get.html" style="text-decoration: none;">
                 <div class="card-body"><span class="badge badge-success">Promo</span>
-                  <div class="product-description"><a class="product-title d-block">Pasang Wifi di rumah</a>
-                    <p class="sale-price">Biaya pasang GRATIS<span></span></p>
+                  <div class="product-description"><span class="product-title d-block">Pasang Wifi di rumah</span>
+                    <p class="sale-price">Biaya pasang GRATIS</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </div>    
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
 
-  <audio id="play" autoplay loop> <source src="http://mikmen.my.id/play.mp3"  type="audio/mp3"> 
-</audio>  
- <!-- Additional Script -->
+  <audio id="play" autoplay loop> 
+    <source src="http://mikmen.my.id/play.mp3" type="audio/mp3"> 
+  </audio>  
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/apay.js"></script>
+
   <script type="text/javascript">
-<!--
-  document.login.username.focus();
-//-->
-</script>
-  <script type="text/javascript">
-	var input1 = document.getElementById('username');
-	var input2 = document.getElementById('password');
-	var updateInputs = function () {
-	input2.value = input1.value;
-	}
-	if (input1.addEventListener) {
-	input1.addEventListener('keyup', function () {
-	updateInputs();
-	});
-	} else if (input1.attachEvent) { // support IE
-	input1.attachEvent('onkeyup', function () {
-	updateInputs();
-	});
-	}
-	</script>
-	<script>
-var myaudio = document.getElementById("play");
+    // Auto-focus username
+    var userInput = document.getElementById('username');
+    if (userInput) userInput.focus();
 
-function PlayStop() { 
-return myaudio.paused ? myaudio.play() : myaudio.pause();
-};
-   </script> 
-    
- <!-- All JavaScript Files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-        <script src="js/apay.js"></script>
+    // Mirror username ke password (sistem voucher)
+    var input1 = document.getElementById('username');
+    var input2 = document.getElementById('password');
+    if (input1 && input2) {
+      input1.addEventListener('input', function () {
+        input2.value = input1.value;
+      });
+    }
 
+    // Logika Error Handling Tanpa document.write
+    var error = "$(error)";
+    if (error && error.trim() !== "") {
+      var errorMsg = error;
+      if (error === "user $(username) has reached uptime limit") { window.location.href="isolir.html"; }
+      else if (error === "invalid password" || error === "invalid username or password") { window.location.href="salah.html"; }
+      else if (error === "no more sessions are allowed for user $(username)" || error === "session limit reached ($(error-orig))" || error === "simultaneous session limit reached") { window.location.href="terpakai.html"; }
+      else if (error === "uptime limit reached") { window.location.href="isolir.html"; }
+      else if (error === "invalid Calling-Station-Id") { window.location.href="digunakan.html"; }
+      else {
+        document.getElementById('error-message').innerText = errorMsg;
+      }
+    }
+  </script>
+</body>
 </html>
